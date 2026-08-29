@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Nos souvenirs ❤️</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    color: white;
+    text-align: center;
+
+    background:
+        linear-gradient(135deg, #16051c, #8b356f, #ff7eb3);
+
+    padding: 35px 18px;
+}
+
+h1 {
+    font-size: clamp(35px, 10vw, 55px);
+    margin-bottom: 15px;
+
+    animation: title 1.5s ease;
+}
+
+.subtitle {
+    font-size: 18px;
+    margin-bottom: 35px;
+
+    animation: fade 2s ease;
+}
+
+.gallery {
+    max-width: 650px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 15px;
+}
+
+.photo {
+    width: 100%;
+    aspect-ratio: 1 / 1.2;
+
+    object-fit: cover;
+
+    border-radius: 25px;
+
+    border: 3px solid rgba(255,255,255,0.7);
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,0.35);
+
+    animation: photo 1.5s ease both;
+
+    transition: 0.4s;
+}
+
+.photo:hover {
+    transform: scale(1.06) rotate(2deg);
+}
+
+.next {
+    margin-top: 35px;
+
+    padding: 15px 30px;
+
+    border: none;
+
+    border-radius: 50px;
+
+    background: white;
+
+    color: #8b356f;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.3);
+}
+
+@keyframes title {
+
+    from {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+@keyframes fade {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
+
+@keyframes photo {
+
+    from {
+        opacity: 0;
+        transform: scale(0.5) rotate(-8deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) rotate(0);
+    }
+
+}
+
+@media (max-width: 450px) {
+
+    .gallery {
+        gap: 10px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<h1>Quelques souvenirs 📸</h1>
+
+<p class="subtitle">
+Des moments qui méritent de rester ❤️
+</p>
+
+
+<div class="gallery">
+
+    <img class="photo" src="photo1.jpg">
+
+    <img class="photo" src="photo2.jpg">
+
+    <img class="photo" src="photo3.jpg">
+
+</div>
+
+
+<button class="next"
+onclick="window.location.href='page3.html'">
+
+    Continuer ✨
+
+</button>
+
+
+</body>
+
+</html>
