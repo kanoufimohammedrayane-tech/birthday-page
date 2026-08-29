@@ -92,8 +92,17 @@ I LOVE YOUU ❤️
     <source src="musiic1.mp3" type="audio/mpeg">
 </audio>
 
-<button class="next" onclick="window.location.href='page4.html'">
-    o ila jat 3la 5aatrk zidi warkii hhhh 
+<button class="next" onclick="goToPage4()">
+   o ila jat 3la 5aatrk zidi warkii hhhh  
+</button>
+
+<script>
+function goToPage4() {
+    localStorage.setItem("musicStarted", "yes");
+    window.location.href = "page4.html";
+}
+</script>
+    
 </button>
 
 </body>
