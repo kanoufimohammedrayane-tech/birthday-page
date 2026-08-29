@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pour toi ❤️</title>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+
+body{
+    min-height:100vh;
+    font-family:Arial,sans-serif;
+    color:white;
+    background:linear-gradient(135deg,#16051c,#8b356f,#ff7eb3);
+    padding:30px 18px;
+}
+
+h1{
+    text-align:center;
+    font-size:clamp(40px,11vw,60px);
+    margin-bottom:10px;
+    text-shadow:0 0 25px rgba(255,255,255,.7);
+}
+
+.subtitle{
+    text-align:center;
+    font-size:18px;
+    margin-bottom:25px;
+}
+
+.heart{
+    text-align:center;
+    font-size:65px;
+    margin:15px;
+    animation:beat 1.2s infinite;
+}
+
+.message{
+    max-width:650px;
+    margin:auto;
+    padding:30px 25px;
+    border-radius:30px;
+    background:rgba(255,255,255,.12);
+    backdrop-filter:blur(15px);
+    box-shadow:0 20px 60px rgba(0,0,0,.4);
+    border:1px solid rgba(255,255,255,.25);
+    font-size:18px;
+    line-height:1.8;
+}
+
+.next{
+    display:block;
+    margin:30px auto;
+    padding:15px 30px;
+    border:0;
+    border-radius:50px;
+    background:white;
+    color:#8b356f;
+    font-size:17px;
+    font-weight:bold;
+}
+
+@keyframes beat{
+    50%{transform:scale(1.25)}
+}
+</style>
+</head>
+
+<body>
+
+<h1>Pour toi ❤️</h1>
+
+<p class="subtitle">Un petit message rien que pour toi...</p>
+
+<div class="heart">❤️</div>
+
+<div class="message">
+    <!-- Écris ta lettre ici -->
+</div>
+
+<audio autoplay loop>
+    <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<button class="next" onclick="window.location.href='page4.html'">
+    La suite... ✨
+</button>
+
+</body>
+</html>
