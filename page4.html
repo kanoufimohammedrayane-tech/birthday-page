@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Forever ❤️</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    overflow: hidden;
+    font-family: Georgia, serif;
+    color: white;
+    background:
+        radial-gradient(circle at center, #7d245f 0%, #300d36 45%, #08030d 100%);
+}
+
+/* LIGHT */
+
+.light {
+    position: fixed;
+    width: 300px;
+    height: 300px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 120, 190, 0.25);
+    filter: blur(80px);
+    border-radius: 50%;
+    animation: glow 4s ease-in-out infinite;
+}
+
+/* STARS */
+
+.star {
+    position: fixed;
+    width: 3px;
+    height: 3px;
+    background: white;
+    border-radius: 50%;
+    animation: twinkle 2s infinite alternate;
+}
+
+/* MAIN */
+
+.container {
+    position: relative;
+    z-index: 5;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 25px;
+}
+
+.card {
+    width: 100%;
+    max-width: 700px;
+
+    padding: 45px 28px;
+
+    text-align: center;
+
+    border-radius: 35px;
+
+    background: rgba(255,255,255,0.10);
+
+    border: 1px solid rgba(255,255,255,0.25);
+
+    backdrop-filter: blur(20px);
+
+    box-shadow:
+        0 30px 100px rgba(0,0,0,0.6),
+        inset 0 0 40px rgba(255,255,255,0.05);
+
+    animation: entrance 2s cubic-bezier(.17,.67,.3,1.2);
+}
+
+.small-title {
+    font-size: 16px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    opacity: 0.75;
+    margin-bottom: 18px;
+
+    animation: fade 3s ease;
+}
+
+h1 {
+    font-size: clamp(45px, 13vw, 80px);
+
+    margin-bottom: 20px;
+
+    text-shadow:
+        0 0 10px rgba(255,255,255,0.8),
+        0 0 40px rgba(255,100,190,0.8);
+
+    animation: title 2s ease;
+}
+
+.heart {
+    font-size: 70px;
+    margin: 10px 0 25px;
+
+    animation:
+        heartbeat 1.3s infinite,
+        appear 2s ease;
+}
+
+/* TEXT AREA */
+
+.message {
+    min-height: 180px;
+
+    padding: 25px;
+
+    border-radius: 25px;
+
+    background: rgba(0,0,0,0.15);
+
+    border: 1px solid rgba(255,255,255,0.15);
+
+    font-size: 19px;
+
+    line-height: 1.9;
+
+    color: rgba(255,255,255,0.95);
+
+    animation: message 3s ease;
+}
+
+/* BUTTON */
+
+button {
+    margin-top: 30px;
+
+    padding: 15px 32px;
+
+    border: none;
+
+    border-radius: 50px;
+
+    background: white;
+
+    color: #7d245f;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow: 0 10px 35px rgba(0,0,0,0.35);
+
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.08);
+}
+
+/* FLOATING HEARTS */
+
+.floating-heart {
+    position: fixed;
+    bottom: -50px;
+
+    font-size: 22px;
+
+    opacity: 0;
+
+    z-index: 2;
+
+    animation: floatUp 8s linear infinite;
+}
+
+/* ANIMATIONS */
+
+@keyframes entrance {
+    from {
+        opacity: 0;
+        transform: scale(0.5) translateY(80px);
+        filter: blur(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+        filter: blur(0);
+    }
+}
+
+@keyframes title {
+    from {
+        opacity: 0;
+        transform: scale(0.6);
+        letter-spacing: 20px;
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+        letter-spacing: normal;
+    }
+}
+
+@keyframes message {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes heartbeat {
+    50% {
+        transform: scale(1.3);
+    }
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes glow {
+    0%,100% {
+        transform: translate(-50%, -50%) scale(0.8);
+        opacity: 0.5;
+    }
+
+    50% {
+        transform: translate(-50%, -50%) scale(1.4);
+        opacity: 1;
+    }
+}
+
+@keyframes twinkle {
+    from {
+        opacity: 0.2;
+        transform: scale(0.5);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1.8);
+    }
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+
+    15% {
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="light"></div>
+
+<div id="stars"></div>
+
+<div class="floating-heart" style="left:10%; animation-delay:0s;">❤️</div>
+<div class="floating-heart" style="left:25%; animation-delay:3s;">💗</div>
+<div class="floating-heart" style="left:45%; animation-delay:1s;">💕</div>
+<div class="floating-heart" style="left:65%; animation-delay:4s;">💖</div>
+<div class="floating-heart" style="left:85%; animation-delay:2s;">❤️</div>
+
+<div class="container">
+
+    <div class="card">
+
+        <div class="small-title">
+            Une dernière chose...
+        </div>
+
+        <h1>Pour toi ❤️</h1>
+
+        <div class="heart">
+            ❤️
+        </div>
+
+        <div class="message">
+
+            <!-- ÉCRIS TON TEXTE ICI -->3rftii dwzt m3aak w7d l3am 3mrii anssah  , knt fr7an fih o ana m3aak , m3a l bnt li knbghiihaa o li 3zizaa 3liyaaa bzzfffff bzfffffff 9ed ssmaa . Knt baghi ngol liik chokraan 7it d5lti l 7yaatii o 5litini tntii nd5ol l 7yaatk , o 7it dwiti m3aya , d7ktii m3ayaa , l3abtii m3ayaa o 7iitt 3titinii mn w9tkk , o hdchii mt5yliichh ch7aal kan ki5linii dimaa fr7aan , o fch kndwi m3aak knt knssa ay 7aga mbrztani , m3ssbani wla m9l9ani aayy 7aga kifmaa kaant , ssii7r yk hhhhh  . 
+Ou 3arf rassii knbrztk wlq kn3ssbk chi mrrat , hhh sara7a bzf ta3 maratt o 3arf rassi kndiir zbaayl ms ssm7ii liyaa 3laa aayee 7agaa drthaa liik , sm7i liyaa ila 3ssbtk wlaa drtt m3aak chii blaan mzwinchh wlaa 9l9tkk wla chi blan f 9lbkk o f 5aatrek wlaaa ay 7agaa sm7ii liyaaa bzfff . Wlhtaa knbghiikk o kn7ma9 3liik ly rzene hhhh . O chno angool liik yarbi t3awnkk f 9raytk o tjibii no9taa atfar7kk o atfr7niii taa anaa hehe o kmliii hukdaa raaki waa3raa bzzfff tbarkeelahh 3lliikk . 
+Db ana m3aak o anb9aa m3aak ykk , knwaa3dkk o knpromissik mnchouuf f ghiirkk , mt3jbnii taa wa7daa mn ghiirk wlaa ghiii nfkrr f chii blaan hakaa . O hdchii raa bini o bin rassi w5aa mtkonich o w5aa mykoun 7adinii taa wa7dd . Knwa3dkk nb9aa nbghiik kifmaa kntt o 3mrii ntbdl 3liik chiii mrraa w5aa nb3dd 3lkk o w5aa m3rtt fin nmchii , anaa houwa ana , o ntmna tkonii tnti hiya ntii o ktfkrii f nfss hdchii .
+3mrii rnssaak f 7yaatii raa bynaa hadii o raaak dimaa f 9albiii o 9albii kamll liiik . O knwa3dkk ndiirr jhddi kaaml o ay 7agaa bchh nb9aa m3aak o nb9aa dimaa 9riib liiik . Db anwlii b3iid 3liik chwiya imkn f mdina aa5raa wla chi blassaa b3ida , ran5aaff n5ssrk o ana b3iid 3lkk . O ntii raa mchii hiyaa cvs , glti liya cvs t9drrr t7mad o iwlii l malal mn b3d , anaa andiir jhdii bchhh mytraachh hdchiii , o ntmnaa ndwzz m3aak 3am aa5err zwiin ktrr mn hadaaa , o l3aam li moraah o li moraah o lil abad 3lach la , o anaa and3ii laah kol mraa bchh ifr7k o i3aawnk o i5liiiik liyaaa yaarbii . Mhm hdchii jaa twiill chwiyaa anm7nk f 9raya ms ntmna i3jbk  , KNBGHIK  ❤️❤️❤️❤️❤️❤️❤️❤️
+
+        </div>
+
+        <button onclick="window.scrollTo({top:0, behavior:'smooth'})">
+            ❤️
+        </button>
+
+    </div>
+
+</div>
+
+<script>
+
+/* STARS */
+
+const stars = document.getElementById("stars");
+
+for (let i = 0; i < 120; i++) {
+
+    const star = document.createElement("div");
+
+    star.className = "star";
+
+    star.style.left = Math.random() * 100 + "%";
+    star.style.top = Math.random() * 100 + "%";
+
+    star.style.animationDelay =
+        Math.random() * 3 + "s";
+
+    stars.appendChild(star);
+}
+
+</script>
+
+</body>
+</html>
