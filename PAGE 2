@@ -161,14 +161,14 @@ Des moments qui méritent de rester ❤️
 
 <div class="gallery">
 
-    <img class="photo" src="photo1.jpg">
-
-    <img class="photo" src="photo2.jpg">
-
-    <img class="photo" src="photo3.jpg">
+    <img class="photo" src="photo1.jpg.jpeg">
+    <img class="photo" src="photo2.jpg.jpeg">
+    <img class="photo" src="photo3.jpg.jpeg">
+    <img class="photo" src="photo4.jpg.jpeg">
+    <img class="photo" src="photo5.jpg.jpeg">
+    <img class="photo" src="photo6.jpg.jpeg">
 
 </div>
-
 
 <button class="next"
 onclick="window.location.href='page3.html'">
